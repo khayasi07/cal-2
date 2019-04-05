@@ -61,6 +61,8 @@ var _getScrapingEvents = function (query) {
         );
     }
 }
+events_api["_getScrapingEvents"] = _getScrapingEvents;
+
 var _stub_axios_get = function () {
     return Promise.resolve({
         "status" : 200,
@@ -69,7 +71,6 @@ var _stub_axios_get = function () {
         ]
     });
 }
-
 
 var _getNationalHolidaysArray = function () {
     // http://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
@@ -124,7 +125,7 @@ var _getNationalHolidaysArray = function () {
         {"start" : "2019-11-23", "title" : "勤労感謝の日" }
     ];
 };
-
+events_api["_getNationalHolidaysArray"] = _getNationalHolidaysArray;
 
 if( this.window ){
     // ブラウザ環境での動作
