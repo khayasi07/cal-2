@@ -20,7 +20,7 @@ var promiseEventsArray = function (queryStr) {
     return new Promise(function(resolve) {
         setTimeout(function() {
             resolve();
-        }, 100); // ロードの都合で1秒待ち。
+        }, 1000); // ロードの都合で1秒待ち。
 
     }).then(function(){
         var query = queryStr ? _parseQuery(queryStr) : null;
